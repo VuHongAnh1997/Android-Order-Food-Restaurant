@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:hint="Phone Number"
+            android:textColorHint="@android:color/black"
+            android:text="0988123344"
+            android:textColor="@android:color/black"
+            android:textSize="34sp"
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:hint="Password"
+            android:textColorHint="@android:color/black"
+            android:text="1234"
+            android:textColor="@android:color/black"
+            android:textSize="34sp"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.rey.material.widget.CheckBox
+                android:id="@+id/ckbRemember"
+                android:layout_weight="1"
+                style="@style/Material.Drawable.CheckBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Remember me"
+                android:textColor="@android:color/black"
+                app:cbd_strokeColor="@color/searchBarNavIconTintColor" />
+
+            <TextView
+                android:id="@+id/txtForgotPwd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/forgot_pwd"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/btnSignIn"
+        android:text="Sign In"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
